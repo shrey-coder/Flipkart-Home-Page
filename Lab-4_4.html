@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <title>Flipkart</title>
+
+    <style></style>
+  </head>
+  <body style="background-color: #eee">
+    <nav
+      class="navbar bg-primary justify-content-between align-items-center"
+      style="
+        padding-left: 200px;
+        padding-right: 120px;
+        position: sticky;
+        top: 0;
+        z-index: 10000;
+      "
+    >
+      <div class="d-flex align-items-center" style="gap: 10px">
+        <a href="#" class="text-decoration-none" style="width: 80px">
+          <img
+            style="width: 90%"
+            class="justify-content-end"
+            src="flipkart.png"
+          />
+          <div
+            class="text-white fst-italic"
+            style="font-size: 12px; width: 80px"
+          >
+            Explore <span class="text-warning">Plus</span>&nbsp;<img
+              style="width: 12%"
+              src="plus.png"
+            />
+          </div>
+        </a>
+        <form class="d-flex">
+          <input
+            class="p-3"
+            type="text"
+            placeholder="Search for products,brands and more"
+            style="width: 510px; height: 36px"
+          />
+          <button class="border-0 p-0" type="submit" style="width: 40px">
+            <ion-icon name="search-outline" style="color: blue"></ion-icon>
+          </button>
+        </form>
+      </div>
+      <button
+        type="button"
+        style="width: 130px; box-shadow: none"
+        class="p-1 btn-light text-primary fw-bold"
+      >
+        Login
+      </button>
+      <a class="text-white text-decoration-none fw-bold" href="#"
+        >Become a Seller</a
+      >
+      <div class="dropdown">
+        <a
+          href="#"
+          class="btn btn-primary dropdown-toggle fw-bold"
+          role="button"
+          id="dropdownMenuLink"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+          >More</a
+        >
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <li class="p-1 ps-0 pe-3">
+            <a class="dropdown-item"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                style="width: 8%; fill: #0d6efd"
+                class=""
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"
+                /></svg
+              >&nbsp;&nbsp;Notifications Preferences</a
+            >
+          </li>
+          <li class="p-1 ps-0 pe-3">
+            <a class="dropdown-item"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                style="width: 8%; fill: #0d6efd"
+                class="h-5 w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                  clip-rule="evenodd"
+                /></svg
+              >&nbsp;&nbsp;24x7 Customer Care</a
+            >
+          </li>
+          <li class="p-1 ps-0 pe-3">
+            <a class="dropdown-item"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                style="width: 8%; fill: #0d6efd"
+                class="h-5 w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z"
+                  clip-rule="evenodd"
+                /></svg
+              >&nbsp;&nbsp;Advertise</a
+            >
+          </li>
+          <li class="p-1 ps-0 pe-3">
+            <a class="dropdown-item"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                style="width: 8%; fill: #0d6efd"
+                class="h-5 w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                /></svg
+              >&nbsp;&nbsp;Download App</a
+            >
+          </li>
+        </ul>
+      </div>
+      <a
+        class="text-white text-decoration-none fw-bold"
+        style="width: 90px"
+        href="#"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          style="width: 25%"
+          class=""
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+          /></svg
+        >&nbsp;Cart</a
+      >
+    </nav>
+    <div
+      class="row gx-2 ps-auto pe-auto align-items-center"
+      style="background-color: white; font-weight: 500"
+    >
+      <div class="col-auto pt-3 pb-1 ms-auto">
+        <a class="text-decoration-none link-dark text-center d-block" href="#">
+          <img class="w-50" src="fp-1.webp" />
+          <p>Top offers</p>
+        </a>
+      </div>
+      <div class="col-auto pt-3 pb-1">
+        <a class="text-decoration-none link-dark text-center d-block" href="#">
+          <img class="w-50" src="fp-2.webp" />
+          <p>Grocery</p>
+        </a>
+      </div>
+      <div class="col-auto pt-3 pb-1">
+        <a class="text-decoration-none link-dark text-center d-block" href="#">
+          <img class="w-50" src="fp-3.webp" />
+          <p>Mobiles</p>
+        </a>
+      </div>
+      <div class="col-auto pt-1 pb-1">
+        <a class="text-decoration-none link-dark text-center d-block" href="#">
+          <img style="width: 50%" src="fp-4.webp" />
+          <div class="dropdown text-center">
+            <a
+              class="text-decoration-none text-dark dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Fashion
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">Men's Top Wear</a></li>
+              <li><a class="dropdown-item" href="#">Men's Bottom Wear</a></li>
+              <li><a class="dropdown-item" href="#">Women Ethnic</a></li>
+              <li><a class="dropdown-item" href="#">Women Western</a></li>
+              <li><a class="dropdown-item" href="#">Men FootWear</a></li>
+            </ul>
+          </div>
+        </a>
+      </div>
+      <div class="col-auto pt-1 pb-1">
+        <a class="text-decoration-none link-dark text-center d-block" href="#">
+          <img style="width: 50%" src="fp-5.webp" />
+          <div class="dropdown text-center">
+            <a
+              class="text-decoration-none text-dark dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Electronics
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">Audio</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Electronics GST Store</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Camera & Accessories</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Computer Peripherals</a>
+              </li>
+              <li><a class="dropdown-item" href="#">Gaming</a></li>
+            </ul>
+          </div>
+        </a>
+      </div>
+      <div class="col-auto pt-1 pb-1">
+        <a class="text-decoration-none link-dark text-center d-block" href="#">
+          <img style="width: 50%" src="fp-6.webp" />
+          <div class="dropdown text-center">
+            <a
+              class="text-decoration-none text-dark dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Home
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">Home Furnishings</a></li>
+              <li><a class="dropdown-item" href="#">Furniture Studio</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Living Room Furniture </a>
+              </li>
+              <li><a class="dropdown-item" href="#">Kitchen & Dining</a></li>
+              <li><a class="dropdown-item" href="#">Bedroom Furniture</a></li>
+            </ul>
+          </div>
+        </a>
+      </div>
+      <div class="col-auto pt-3 pb-1">
+        <a class="text-decoration-none link-dark text-center d-block" href="#">
+          <img class="w-50" src="fp-7.webp" />
+          <p>Appliances</p>
+        </a>
+      </div>
+      <div class="col-auto pt-3 pb-1">
+        <a class="text-decoration-none link-dark text-center d-block" href="#">
+          <img class="w-50" src="fp-8.webp" />
+          <p>Travel</p>
+        </a>
+      </div>
+      <div class="col-auto pt-1 pb-1 me-auto">
+        <a class="text-decoration-none link-dark text-center d-block" href="#">
+          <img style="width: 35%" src="fp-9.webp" />
+          <div class="dropdown text-center">
+            <a
+              class="text-decoration-none text-dark dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              >Beauty,Toys and More
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li>
+                <a class="dropdown-item" href="#">Beauty & Personal Care</a>
+              </li>
+              <li><a class="dropdown-item" href="#">Men's Grooming</a></li>
+              <li><a class="dropdown-item" href="#">Food & Drinks</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Nutrition & Health Care</a>
+              </li>
+              <li><a class="dropdown-item" href="#">Baby Care</a></li>
+            </ul>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div
+      id="carouselExampleControls"
+      class="carousel slide mt-3 ms-2 me-2"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="c-1.webp" class="d-block w-100" alt="c-1" />
+        </div>
+        <div class="carousel-item">
+          <img src="c-2.webp" class="d-block w-100" alt="c-2" />
+        </div>
+        <div class="carousel-item">
+          <img src="c-3.webp" class="d-block w-100" alt="c-3" />
+        </div>
+        <div class="carousel-item">
+          <img src="c-4.webp" class="d-block w-100" alt="c-4" />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="mt-4 ms-2 me-2">
+      <a href="#"><img class="w-100" src="i-1.webp" /></a>
+    </div>
+    <section
+      class="electronics mt-4 ms-2 me-2 p-2 border border-secondary"
+      style="background-color: white"
+    >
+      <div
+        class="pt-2 ps-3 electronics-heading d-flex justify-content-between align-items-center"
+      >
+        <h3>Best Of Electronics</h3>
+        <button type="button" class="btn btn-primary">VIEW ALL</button>
+      </div>
+      <hr />
+      <div
+        class="electronics-products d-flex align-items-center justify-content-between"
+      >
+        <a href="#" class="p-2 text-decoration-none text-black-50 text-center">
+          <img src="e-1.webp" alt="e-1" />
+          <h5 class="fs-5 mt-4 text-dark">Thin and Light Laptops</h5>
+          <h6>From Rs18,990</h6>
+          <h6>Starting from 1000 gms</h6>
+        </a>
+        <a href="#" class="p-2 text-decoration-none text-black-50 text-center">
+          <img src="e-2.webp" alt="e-2" />
+          <h5 class="fs-5 mt-4 text-dark">12th Gen Laptops</h5>
+          <h6>From Rs47990</h6>
+          <h6>High Performance Laptops</h6>
+        </a>
+        <a href="#" class="p-2 text-decoration-none text-black-50 text-center">
+          <img src="e-3.webp" alt="e-3" />
+          <h5 class="fs-5 mt-4 text-dark">Printers</h5>
+          <h6>From Rs3,999</h6>
+          <h6>HP</h6>
+        </a>
+        <a href="#" class="p-2 text-decoration-none text-black-50 text-center">
+          <img src="e-4.webp" alt="e-4" />
+          <h5 class="fs-5 mt-4 text-dark">ASUS Monitors</h5>
+          <h6>From Rs14,999</h6>
+          <h6>Top Rated</h6>
+        </a>
+        <a href="#" class="p-2 text-decoration-none text-black-50 text-center">
+          <img src="e-5.webp" alt="e-5" />
+          <h5 class="fs-5 mt-4 text-dark">Premium Laptops</h5>
+          <h6>From Rs45,990</h6>
+          <h6>HP Pavillion |Asus Oled</h6>
+        </a>
+        <a href="#" class="p-2 text-decoration-none text-black-50 text-center">
+          <img src="e-6.webp" alt="e-6" />
+          <h5 class="fs-5 mt-4 text-dark">Printers</h5>
+          <h6>From Rs2,336</h6>
+          <h6>Canon</h6>
+        </a>
+        <a href="#" class="p-2 text-decoration-none text-black-50 text-center">
+          <img src="e-7.webp" alt="e-7" />
+          <h5 class="fs-5 mt-4 text-dark">Printers</h5>
+          <h6>From Rs10,919</h6>
+          <h6>Brothers</h6>
+        </a>
+      </div>
+    </section>
+    <section
+      class="beauty mt-4 ms-2 me-2 p-2 border border-secondary"
+      style="background-color: white"
+    >
+      <div
+        class="pt-2 ps-3 beauty-heading d-flex justify-content-between align-items-center"
+      >
+        <h3>Beauty, Food, Toys & more</h3>
+        <button type="button" class="btn btn-primary">VIEW ALL</button>
+      </div>
+      <hr />
+      <div
+        class="beauty-products d-flex align-items-center justify-content-between"
+      >
+        <a href="#" class="p-2 text-decoration-none text-black-50 text-center">
+          <img src="b-1.webp" alt="b-1" />
+          <h5 class="fs-5 mt-4 text-dark">Helmets</h5>
+          <h6>From Rs2,999</h6>
+          <h6>HRX,Jarvis & many more</h6>
+        </a>
+        <a
+          href="#"
+          class="p-2 pt-5 text-decoration-none text-black-50 text-center"
+        >
+          <img src="b-2.webp" alt="b-2" />
+          <h5 class="fs-5 mt-4 text-dark">Premium Cycles</h5>
+          <h6>From Rs21,699</h6>
+          <h6>Montara</h6>
+        </a>
+        <a href="#" class="p-2 text-decoration-none text-black-50 text-center">
+          <img src="b-3.webp" alt="b-3" />
+          <h5 class="fs-5 mt-4 text-dark">Exercises Equiments</h5>
+          <h6>Up to 70% Off</h6>
+          <h6>Fitkit,Powermax and more</h6>
+        </a>
+        <a href="#" class="p-2 text-decoration-none text-black-50 text-center">
+          <img src="b-4.webp" alt="b-4" />
+          <h5 class="fs-5 mt-4 text-dark">Toys</h5>
+          <h6>Up to 60% Off</h6>
+          <h6>Top Rated</h6>
+        </a>
+        <a href="#" class="p-2 text-decoration-none text-black-50 text-center">
+          <img src="b-5.webp" alt="b-5" />
+          <h5 class="fs-5 mt-4 text-dark">PushUps Equiment</h5>
+          <h6>From Rs999</h6>
+          <h6>Best Sellers</h6>
+        </a>
+        <a href="#" class="p-2 text-decoration-none text-black-50 text-center">
+          <img src="b-6.webp" alt="b-6" />
+          <h5 class="fs-5 mt-4 text-dark">Cosmetics</h5>
+          <h6>Upto 70% Off</h6>
+          <h6>Branded Cosmetics</h6>
+        </a>
+        <a href="#" class="p-2 text-decoration-none text-black-50 text-center">
+          <img src="b-7.webp" alt="b-7" />
+          <h5 class="fs-5 mt-4 text-dark">Wheel Roller</h5>
+          <h6>From Rs499</h6>
+          <h6>Best Range</h6>
+        </a>
+      </div>
+    </section>
+    <section
+      class="home mt-4 ms-2 me-2 p-2 border border-secondary"
+      style="background-color: white"
+    >
+      <div
+        class="pt-2 ps-3 home-heading d-flex justify-content-between align-items-center"
+      >
+        <h3>Home & Kitchen Essentials</h3>
+        <button type="button" class="btn btn-primary">VIEW ALL</button>
+      </div>
+      <hr />
+      <div
+        class="home-products d-flex align-items-center justify-content-between"
+      >
+        <a href="#" class="p-2 text-decoration-none text-black-50 text-center">
+          <img src="h-1.webp" alt="h-1" />
+          <h5 class="fs-5 mt-4 text-dark">Wall Clocks</h5>
+          <h6>Upto 20% Off</h6>
+          <h6>Big Discounts</h6>
+        </a>
+        <a href="#" class="p-2 text-decoration-none text-black-50 text-center">
+          <img src="h-2.webp" alt="h-2" />
+          <h5 class="fs-5 mt-4 text-dark">Mosquito Nets</h5>
+          <h6>From Rs199</h6>
+          <h6>Big Discounts</h6>
+        </a>
+        <a href="#" class="p-2 text-decoration-none text-black-50 text-center">
+          <img src="h-3.webp" alt="h-3" />
+          <h5 class="fs-5 mt-4 text-dark">Door Mats</h5>
+          <h6>From Rs39</h6>
+          <h6>Best Selling Range</h6>
+        </a>
+        <a href="#" class="p-2 text-decoration-none text-black-50 text-center">
+          <img src="h-4.webp" alt="h-4" />
+          <h5 class="fs-5 mt-4 text-dark">Bed Covers</h5>
+          <h6>From Rs199</h6>
+          <h6>Trendy Collections</h6>
+        </a>
+        <a href="#" class="p-2 text-decoration-none text-black-50 text-center">
+          <img src="h-5.webp" alt="h-5" />
+          <h5 class="fs-5 mt-4 text-dark">Bedsheets</h5>
+          <h6>From Rs129</h6>
+          <h6>Trendy Collections</h6>
+        </a>
+        <a href="#" class="p-2 text-decoration-none text-black-50 text-center">
+          <img src="h-6.webp" alt="h-6" />
+          <h5 class="fs-5 mt-4 text-dark">Curtains</h5>
+          <h6>From Rs99</h6>
+          <h6>Best Selling Range</h6>
+        </a>
+        <a href="#" class="p-2 text-decoration-none text-black-50 text-center">
+          <img src="h-7.webp" alt="h-7" />
+          <h5 class="fs-5 mt-4 text-dark">Diya Covers</h5>
+          <h6>From Rs49</h6>
+          <h6>Best Collections</h6>
+        </a>
+      </div>
+    </section>
+    <footer class="p-2 ps-3 pe-5 mt-5" style="background-color: #172337">
+      <div
+        class="footer-links-1 pt-4 me-5 ms-5 d-flex justify-content-between"
+        style="gap: 50px"
+      >
+        <ul class="lh-lg" style="list-style: none; font-size: 14px">
+          <li class="text-secondary mb-3">ABOUT</li>
+          <li>
+            <a href="#" class="text-decoration-none text-white">Contact Us</a>
+          </li>
+          <li>
+            <a href="#" class="text-decoration-none text-white">Abous Us</a>
+          </li>
+          <li>
+            <a href="#" class="text-decoration-none text-white">Stories</a>
+          </li>
+          <li>
+            <a href="#" class="text-decoration-none text-white">Press</a>
+          </li>
+          <li>
+            <a href="#" class="text-decoration-none text-white">Wholesale</a>
+          </li>
+        </ul>
+        <ul class="lh-lg" style="list-style: none; font-size: 14px">
+          <li class="text-secondary mb-3">HELP</li>
+          <li>
+            <a href="#" class="text-decoration-none text-white">Payments</a>
+          </li>
+          <li>
+            <a href="#" class="text-decoration-none text-white">Shipping</a>
+          </li>
+          <li>
+            <a href="#" class="text-decoration-none text-white">Cancellation</a>
+          </li>
+          <li>
+            <a href="#" class="text-decoration-none text-white">FAQ</a>
+          </li>
+          <li>
+            <a href="#" class="text-decoration-none text-white">Report</a>
+          </li>
+        </ul>
+        <ul class="lh-lg" style="list-style: none; font-size: 14px">
+          <li class="text-secondary mb-3">POLICY</li>
+          <li>
+            <a href="#" class="text-decoration-none text-white"
+              >Return Policy</a
+            >
+          </li>
+          <li>
+            <a href="#" class="text-decoration-none text-white">Terms Of Use</a>
+          </li>
+          <li>
+            <a href="#" class="text-decoration-none text-white">Security</a>
+          </li>
+          <li>
+            <a href="#" class="text-decoration-none text-white">Privacy</a>
+          </li>
+          <li>
+            <a href="#" class="text-decoration-none text-white">Sitemap</a>
+          </li>
+        </ul>
+        <ul class="lh-lg" style="list-style: none; font-size: 14px">
+          <li class="text-secondary mb-3">SOCIAL</li>
+          <li>
+            <a href="#" class="text-decoration-none text-white">Facebook</a>
+          </li>
+          <li>
+            <a href="#" class="text-decoration-none text-white">Twitter</a>
+          </li>
+          <li>
+            <a href="#" class="text-decoration-none text-white">Youtube</a>
+          </li>
+        </ul>
+        <p
+          class="ps-4 border-start border-secondary text-white"
+          style="font-size: 14px"
+        >
+          <span class="text-secondary mb-3" style="display: inline-block"
+            >Mail Us:</span
+          >
+          <br />
+          Flipkart Internet Private Limited, <br />
+          Buildings Alyssa, Begonia &<br />
+          Clove Embassy Tech Village,<br />
+          Outer Ring Road, Devarabeesanahalli Village,<br />
+          Bengaluru, 560103,<br />
+          Karnataka,<br />
+          India
+        </p>
+        <p class="ps-4 text-white" style="font-size: 14px">
+          <span class="text-secondary mb-3" style="display: inline-block"
+            >Registered Office Address:</span
+          >
+          <br />
+          Flipkart Internet Private Limited,<br />
+          Buildings Alyssa, Begonia &<br />
+          Clove Embassy Tech Village,<br />
+          Outer Ring Road, Devarabeesanahalli Village,<br />
+          Bengaluru, 560103,<br />
+          Karnataka,<br />
+          India CIN : U51109KA2012PTC066107<br />
+          Telephone: 044-45614700
+        </p>
+      </div>
+      <div class="border-top border-secondary">
+        <ul
+          class="d-flex pt-3 ps-5 justify-space-between text-white"
+          style="list-style: none; gap: 80px"
+        >
+          <li>
+            <img src="f-1.svg" alt="f-1" />&nbsp;&nbsp;
+            <a href="#" class="text-decoration-none text-white"
+              >Become a Seller</a
+            >
+          </li>
+          <li>
+            <img src="f-2.svg" alt="f-2" />&nbsp;&nbsp;
+            <a href="#" class="text-decoration-none text-white">Advertise</a>
+          </li>
+          <li>
+            <img src="f-3.svg" alt="f-3" />&nbsp;&nbsp;
+            <a href="#" class="text-decoration-none text-white">Gift Cards</a>
+          </li>
+          <li>
+            <img src="f-4.svg" alt="f-4" />&nbsp;&nbsp;
+            <a href="#" class="text-decoration-none text-white">Help Center</a>
+          </li>
+          <li>&copy;2007-2022 Flipkart.com</li>
+          <li><img src="f-5.svg" alt="f-5" /></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
